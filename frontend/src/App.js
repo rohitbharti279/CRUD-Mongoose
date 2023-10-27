@@ -1,4 +1,4 @@
-// showing image directly from mongoDB using base64 also image will store in mongoDB with base64 encoded data
+// showing image directly from mongoDB using base64 also image will store in mongoDB with base64 encoded data *
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
