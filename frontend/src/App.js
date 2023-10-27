@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const baseUrl = "https://crud-3.onrender.com";
+// const baseUrl = "https://crud-3.onrender.com";
 
 function App() {
   const [name, setName] = useState('');
@@ -12,8 +12,8 @@ function App() {
   const [data, setData] = useState([]);
 
   useEffect(() => {
-    // axios.get('http://localhost:3001/api/getData')
-    axios.get(`${baseUrl}/api/getData`)
+    axios.get('http://localhost:3001/api/getData')
+    // axios.get(`${baseUrl}/api/getData`)
       .then(res => {
         setData(res.data);
       })
@@ -29,8 +29,8 @@ function App() {
     formData.append('email', email);
     formData.append('image', image);
 
-    // axios.post('http://localhost:3001/api/saveData', formData, {
-    axios.post(`${baseUrl}/api/saveData`, formData, {
+    axios.post('http://localhost:3001/api/saveData', formData, {
+    // axios.post(`${baseUrl}/api/saveData`, formData, {
       headers: {
         ' Content-Type': 'multipart/form-data',
       },
@@ -46,8 +46,8 @@ function App() {
   };
 
   const handleDelete = (id) => {
-    //     axios.delete(`http://localhost:3001/api/deleteData/${id}`)
-    axios.delete(`${baseUrl}/api/deleteData/${id}`)
+        axios.delete(`http://localhost:3001/api/deleteData/${id}`)
+    // axios.delete(`${baseUrl}/api/deleteData/${id}`)
       .then(res => {
         setData(data.filter(item => item._id !== id));
       })
