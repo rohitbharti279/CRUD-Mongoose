@@ -2,7 +2,7 @@
 import React, { useState, useEffect } from 'react';
 import axios from 'axios';
 
-const baseUrl = "https://crud-2.onrender.com";
+const baseUrl = "https://crud-3.onrender.com";
 
 function App() {
   const [name, setName] = useState('');
